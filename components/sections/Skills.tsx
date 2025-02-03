@@ -17,7 +17,7 @@ export default function Skills() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 px-4 md:px-6 lg:px-8 bg-muted/30">
+    <section id="skills" className="py-16 sm:py-20 px-4 md:px-6 lg:px-8 bg-muted/30">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

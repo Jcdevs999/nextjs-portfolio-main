@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, ExternalLinkIcon, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -12,28 +12,39 @@ export default function Projects() {
       title: "PESO Project",
       description: "Unemployment Rate using Next.js, TypeScript and MongoDB.",
       image: "/assets/PESO.jpg",
-      github: "#",
+      github: "https://github.com/Jcdevs999/PESO-project",
       live: "#",
     },
     {
       title: "Coffee Shop",
       description: "An Coffee Shop project using C# .Net winform and SQLite.",
       image: "/assets/COFFEE.jpg",
-      github: "#",
+      github: "#https://github.com/Jcdevs999/Coffeshop_project",
       live: "#",
     },
     {
-      title: "SAP Business One",
+      title: "Coffee Management Design",
       description:
-        "SAP Business One project using PHP and SQL Management System.",
-      image: "/assets/JCBA.jpg", // Updated image path
-      github: "#",
-      live: "#",
+        "Designed using shadcn UI, and lucide icons request by client.",
+      image: "/assets/caffeine.jpg", // Updated image path
+      github: "https://github.com/Jcdevs999/coffee-ui-design",
+      live: "https://coffee-ui-design-rmk9.vercel.app/",
+    },
+    {
+      title: "E-commerce Personal Project",
+      description:
+        "My personal e-commerce design.",
+      image: "/assets/ecomms.jpg", // Updated image path
+      github: "https://github.com/Jcdevs999/ecommerce-design-ui-personal",
+      live: "https://ecommerce-design-ui-personal-hjws.vercel.app/",
     },
   ];
 
   return (
-    <section className="py-16 sm:py-20 px-4 md:px-6 lg:px-8 bg-background">
+    <section
+      id="projects"
+      className="py-16 sm:py-20 px-4 md:px-6 lg:px-8 bg-background"
+    >
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -41,8 +52,10 @@ export default function Projects() {
         transition={{ duration: 0.8 }}
         className="max-w-6xl mx-auto"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16">Featured Projects</h2>
-        
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16">
+          Featured Projects
+        </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
@@ -62,11 +75,29 @@ export default function Projects() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-lg sm:text-xl">{project.title}</CardTitle>
-                  <CardDescription className="text-sm sm:text-base">{project.description}</CardDescription>
+                  <CardTitle className="text-lg sm:text-xl">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm sm:text-base">
+                    {project.description}
+                  </CardDescription>
                   <div className="flex gap-3 sm:gap-4 mt-4">
-                    <Button size="sm" className="text-sm" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" className="text-sm mt-2" asChild>
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLinkIcon className="w-4 h-4 mr-1.5" />
+                        Demo
+                      </a>
+                    </Button>
+                    <Button size="sm" className="text-sm mt-2" asChild>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Github className="w-4 h-4 mr-1.5" />
                         Code
                       </a>

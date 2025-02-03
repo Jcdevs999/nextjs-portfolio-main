@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="h-screen flex items-center justify-center relative overflow-hidden px-4">
+    <section id="hero" className="h-screen flex items-center justify-center relative overflow-hidden px-4">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-background/5 z-0" />
       
       <motion.div

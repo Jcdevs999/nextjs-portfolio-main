@@ -27,7 +27,7 @@ export default function About() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 px-4 md:px-6 lg:px-8 bg-background">
+    <section id="about" className="py-16 sm:py-20 px-4 md:px-6 lg:px-8 bg-background">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
